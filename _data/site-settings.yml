@@ -1,0 +1,36 @@
+seo:
+  site_name: 
+  title:
+  type: website
+  description: 
+  keywords: 
+  social_image:
+  twitter_description: 
+social:
+  instagram_username: 
+  facebook_username:
+  pinterest_username:
+  linkedin_username:
+  twitter_username: 
+  tiktok_username: 
+  youtube_username:
+instagram_feed:
+  widget: false
+  images:
+    - image: /images/photo-1.jpg
+    - image: /images/photo-2.jpg
+    - image: /images/photo-1.jpg
+    - image: /images/photo-2.jpg
+brand:
+  primary_color: '#B1BAB5'
+  secondary_color: '#5F9595'
+  light_color: '#FFFFFF'
+  dark_color: 
+  bright_color:
+  primary_logo_path: /images/brand_logo.png
+  secondary_logo_path:
+  submark_logo_path:
+technical:
+  google-analytics_embed:
+  instagram_widget_embed:
+  code_for_head:

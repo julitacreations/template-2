@@ -1,0 +1,37 @@
+<div class="col-span-full flex justify-center items-center space-x-6 mb-4">
+  {% if site.data.site-settings.social.instagram_username %}
+  <a class="inline-block" target="_blank" href="https://www.instagram.com/{{site.data.site-settings.social.instagram_username}}">
+  <i class="text-xl text-white fab fa-instagram p-2"></i>
+  </a>
+  {% endif %}
+
+  {% if site.data.site-settings.social.facebook_username %}
+  <a class="inline-block" target="_blank" href="https://www.facebook.com/{{site.data.site-settings.social.facebook_username}}">
+  <i class="text-xl text-white fab fa-facebook-f p-2"></i>
+  </a>
+  {% endif %}
+
+  {% if site.data.site-settings.social.pinterest_username %}
+  <a class="inline-block" href="https://www.pinterest.co.uk/{{site.data.site-settings.social.pinterest_username}}" rel="nofollow" target="_blank">
+  <i class="text-xl  text-white fab fa-pinterest-p p-2"></i>
+  </a>
+  {% endif %}
+
+  {% if site.data.site-settings.social.linkedin_username %}
+  <a class="inline-block" href="https://www.linkedin.com/{{site.data.site-settings.social.linkedin_username}}" rel="nofollow" target="_blank">
+  <i class="text-xl text-white fab fa-linkedin p-2"></i>
+  </a>
+  {% endif %}
+
+  {% if site.data.site-settings.social.twitter_username %}
+  <a class="inline-block" href="https://www.twitter.com/{{site.data.site-settings.social.twitter_username}}" rel="nofollow" target="_blank">
+  <i class="text-xl text-white fab fa-twitter p-2"></i>
+  </a>
+  {% endif %}
+
+  {% if site.data.site-settings.social.tiktok_username %}
+  <a class="inline-block" href="https://www.tiktok.com/{{site.data.site-settings.social.tiktok_username}}" rel="nofollow" target="_blank">
+  <i class="text-xl text-white fab fa-brands fa-tiktok p-2"></i>
+  </a>
+  {% endif %}
+</div>

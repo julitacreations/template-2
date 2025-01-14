@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--------------------- SEO Metadata ----------------------->
+    <title>{{ page.title | default: site.data.site-settings.seo.title }}</title>
+    <meta name="description" content="{{ page.seo.meta-description | default: site.data.site-settings.seo.meta-description }}">
+    <meta name="keywords" content="{{ page.seo.keywords | default: site.data.site-settings.seo.keywords }}">
+
+    {% if page.seo.hide-from-google == true %}
+        <meta name="robots" content="noindex, nofollow">
+    {% else %}
+        <meta name="robots" content="index, follow">
+    {% endif %}
+
+    <!--------------------- Meta for social sharing ----------------------->
+    <meta property="og:title" content="{{ page.title | default: site.data.site-settings.seo.title }}">
+    <meta property="og:type" content="{{ page.title | default: site.data.site-settings.seo.type }}">
+    <meta property="og:description" content="{{ page.seo.description | default: site.data.site-settings.seo.description }}"> 
+    <meta property="og:image" content="{{ page.seo.social_image | default: site.data.site-settings.seo.social_image }}">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:description" content=" {{ page.seo.twitter_description | default: site.data.site-settings.seo.twitter_description}} ">
+    <meta name="og:site_name" content="{{ site.data.site-settings.seo.site_name }}">
+
+    <!--------------------- Google Analytics ----------------------->
+    {{site.data.site-settings.technical.google-analytics_embed}}
+
+    <!--------------------- External Client Code for Head ----------------------->
+    {{site.data.site-settings.technical.code_for_head}}      
+    
+    <!--------------------- Project Specific Code for Head ----------------------->
+    {% include default/head-includes.html %}
+
+    <!--------------------- Font Awesome Version 6 for icons ----------------------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--------------------- Custom Stylesheet ----------------------->
+    <link rel="stylesheet" href="{{ '/dist/main.css' | relative_url }}">
+
+ </head>
+
+
+<body>
+  <!--------------------- Header ----------------------->
+  {% include headers/header-base.html %}
+
+
+  <!--------------------- Brand Colours ----------------------->
+  {% include default/inline-styles.html %}
+
+  <!--------------------- Body ----------------------->
+
+    {{content}}
+
+  <!--------------------- Instagram Embed Widget ----------------------->
+  {% include default/instagram-feed.html %}
+
+  <!--------------------- Footer ----------------------->
+
+  {% include /sliders/press-slider.html %}
+
+  
+  {% include footers/logo-center.html %}
+
+</body>
+
+
+  <!--------------------- Site Wide Javascript ----------------------->
+
+  <!--jQuery -->
+
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+  <!-- Slick slider (press logos) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- Custom javascript style -->
+  <script src="/javascript/scripts.js" defer></script>
+
+</html>

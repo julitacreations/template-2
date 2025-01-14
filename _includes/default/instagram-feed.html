@@ -1,0 +1,23 @@
+<section class="md:p-10 p-5">
+
+    {% if site.data.site-settings.instagram_feed.widget %}
+  
+    {{site.data.site-settings.technical.instagram_widget_embed}}
+  
+    {% else %}
+
+    <a href="https://www.instagram.com/{{site.data.site-settings.social.instagram_username}}" target="_blank">
+      <h2 class="title-sm mb-2">@{{site.data.site-settings.social.instagram_username}} </h2>
+    </a> 
+  
+    <div class="grid md:grid-cols-4 grid-cols-2 gap-2">
+        {% for item in site.data.site-settings.instagram_feed.images %}
+        <a href="https://instagram.com/{{site.data.site-settings.social.instagram_username}}">
+            <img src="{{item.image}}" alt="" class="object-cover object-center aspect-square">
+        </a>
+        {% endfor %}
+    </div>
+  
+    {% endif %}
+  
+</section>

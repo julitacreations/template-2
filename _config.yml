@@ -1,0 +1,21 @@
+_inputs:
+  layout:
+    hidden: true
+  text_html: 
+    type: html
+    options:
+      blockquote: false
+      bold: true
+      format: p h2 h3 h4
+      link: true
+      italic: true
+      bulletedlist: true
+  description_html: 
+    type: html
+    options:
+      blockquote: false
+      bold: true
+      format: p h2 h3 h4
+      link: true
+      italic: true
+      bulletedlist: true      

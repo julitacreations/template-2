@@ -1,0 +1,63 @@
+   <!-- Footer -->
+   <footer class="grid lg:grid-cols-3 grid-cols-1 bg-primary">
+
+    <div class="hidden lg:grid">
+      <div class="text-center grid min-h-[5vh]">
+        <nav class="nav-items ">
+      
+      {% for item in site.data.navigation.footer limit:2 %}
+          <a href="{{item.nav_link}}" class="text-sm">{{item.nav_title}}</a>
+      {% endfor %}
+        </nav>
+      </div>
+    </div>
+
+    <div class="flex justify-center items-center">
+        <a href="/index">
+          <a href="/"><img src="/images/brand_logo.png" alt="" class="inline-block object-center object-contain mx-auto m-0 p-0 h-12"></a>
+        </a>
+    </div>
+
+
+
+      <!-- mobile nav -->
+      <div class="grid lg:hidden">
+        <div class="text-center grid min-h-[5vh]">
+          <nav class="nav-items ">
+        
+        {% for item in site.data.navigation.footer limit:3 %}
+        <a href="{{item.nav_link}}" class="text-sm">{{item.nav_title}}</a>
+        {% endfor %}
+          </nav>
+        </div>
+      </div>
+      <!-- end of mobile nav -->
+
+
+      <div class="hidden lg:grid">
+        <div class="text-center grid min-h-[5vh]">
+          <nav class="nav-items">
+        
+        {% for item in site.data.navigation.footer limit:2 offset:2 %}
+            <a href="{{item.nav_link}}" class="text-sm">{{item.nav_title}}</a>
+        {% endfor %}
+          </nav>
+        </div>
+      </div>
+
+
+
+      <div class="col-span-full flex justify-center items-center space-x-6 mb-4">
+
+        {% include default/social-icons.html %}
+
+      </div>
+
+
+    <div class="col-span-full text-center mb-4">
+        <span class="text-[0.6rem]">© <span id="year"></span> Company Name. All Rights Reserved. <br class="md:hidden"> Website by <a class="underline" href="https://klioh.com" target="_blank">Klioh Studio</a>
+        </span>
+    </div>
+
+  
+  </footer>

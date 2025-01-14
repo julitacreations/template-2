@@ -1,0 +1,12 @@
+<!-- Slider logo code -->
+<div class="pressSlider">
+
+  {% for item in site.data.information.press %}
+    <div class="p-6 md:p-[1rem_3rem]">
+      <div class="md:p-10 p-3">
+        <img src="{{item.image}}" alt="Featured press company logos" class="object-contain object-center">
+      </div>
+    </div>
+  {% endfor %}
+
+</div>

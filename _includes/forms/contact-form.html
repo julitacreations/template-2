@@ -1,0 +1,62 @@
+<form class="grid grid-cols-2 gap-[5px] w-full" action="https://api.web3forms.com/submit" method="POST">
+  <!-- Add custom value key below -->
+  <input type="hidden" name="access_key" value="" />
+    <div class="md:col-span-1 col-span-full">
+      <input type="text" name="name" placeholder="Your Name*" required />
+    </div>
+    <div class="md:col-span-1 col-span-full">
+      <input type="email" name="email" placeholder="Your Email*" required />
+    </div>
+      <div class="col-span-2">
+        <input type="text" name="subject" placeholder="Subject of Enquiry" />
+      </div>
+    <div class="col-span-2">
+      <textarea type="text" name="message" placeholder="Your Message*" required ></textarea>
+    </div>
+    <div class="col-span-full">
+      <input type="submit" value="Submit" />
+    </div>
+    <!-- Add full URL for custom redirect in value below (include https) -->
+    <input type="hidden" name="redirect" value="" />
+  </form>
+  <script src="https://web3forms.com/client/script.js" async defer></script>
+
+
+  
+<style>
+    /* add custom font and size below for input and text area */
+    input,
+    textarea {
+      font-family: sans-serif;
+      font-size: 0.8rem;
+      border-style: solid;
+      border: 1px solid black;
+      padding: 0.9rem;
+      display: block;
+      width: 100%;
+     }
+    
+     /* add custom font for placeholder text below */
+     input [type="placeholder"]  {
+      font-family: sans-serif;
+    }
+    
+    input:focus,
+    textarea:focus {
+      outline: none;
+      border: 1px solid black;
+    }
+    
+    textarea { min-height: 7rem; }
+    
+    input[type="submit"] {
+      width: 100%;
+      text-transform: uppercase;
+      display: block;
+      -webkit-appearance: none;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #FEFBEC;
+    }
+</style>
